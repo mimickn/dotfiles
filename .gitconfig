@@ -1,0 +1,50 @@
+[color]
+    ui = auto
+[user]
+    name = mimickn
+    email = mimickn1109@gmail.com
+
+[alias]
+    ;; --- git log ---
+    ;; commit logのツリー表示
+    logt = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    ;; commit logの変更ファイル一覧表示
+    logs = log --name-status
+
+    ;; --- git diff ---
+    ;; commit間の変更ファイル一覧表示
+    difff = diff --stat --name-only
+    diffc = diff --cached
+    diffs = diff --ignore-space-change
+    diffp = diff HEAD^
+
+    ;; --- よく使うコマンドの短縮 ---
+    st = status -s
+    stu = status -s -uno
+    co = checkout
+    br = branch
+
+    ;; merge
+    mg = merge --no-ff
+
+    ;; stash系
+    slist = stash list
+    sapply = stash apply
+    ssave = stash save
+    ssaveu = stash save -u
+    sdrop = stash drop
+
+    ;; 空コミット許可
+    commite = commit --allow-empty
+
+    ;; 強制push(リモートが最新だとコケる...はず)
+    pushforce = push --force-with-lease
+[core]
+    pager = less -x4
+    editor = vim -c \"set fenc=utf-8\"
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[difftool "vimdiff"]
+    cmd = vimdiff $LOCAL
