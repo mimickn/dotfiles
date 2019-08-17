@@ -23,6 +23,8 @@
     stu = status -s -uno
     co = checkout
     br = branch
+    sw = switch
+    rs = restore
 
     ;; merge
     mg = merge --no-ff
